@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indo Fashion Tips</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { softpink: '#FDE2E4', darkpink: '#F8A4C8' }, fontFamily: { poppins: ['Poppins', 'sans-serif'], playfair: ['Playfair Display', 'serif'] } } }
+        }
+    </script>
+    <style>
+        body {overflow-x: hidden;}
+        .no-scroll {overflow: hidden; height: 100vh;}
+        
+        /* ANIMASI */
+        .float { animation: float 3s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+        
+        .pulse { animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        
+        .shine {
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+            background-size: 200% 100%;
+            animation: shine 3s infinite;
+        }
+        @keyframes shine { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+
+        .bounce-in { animation: bounceIn 1s ease-out; }
+        @keyframes bounceIn { 0% { transform: scale(0.9); opacity: 0; } 70% { transform: scale(1.05); } 100% { transform: scale(1); opacity: 1; } }
+    </style>
+</head>
+<body class="bg-white font-poppins text-gray-700">
+
+<!-- HALAMAN 1: HOME -->
+<section id="home" class="fixed inset-0 bg-gradient-to-br from-softpink via-white to-softpink flex items-center justify-center z-50 no-scroll">
+    <div class="text-center px-6 w-full max-w-md bounce-in">
+        <h1 class="font-playfair text-[clamp(3rem,10vw,5rem)] text-gray-800 mb-2 relative">
+            <span class="text-darkpink">Indo</span> Fashion
+        </h1>
+        <p class="text-gray-500 mb-12 italic">Style Guide Gen Z | Update 2026</p>
+        
+        <div class="space-y-6 relative">
+            <div class="absolute -top-10 -left-5 text-4xl float">✨</div>
+            <div class="absolute -top-5 right-0 text-3xl float" style="animation-delay: 0.5s;">💖</div>
+            <div class="absolute bottom-0 -right-5 text-5xl float" style="animation-delay: 1s;">👗</div>
+
+            <button onclick="openPage('page2')" class="w-full py-5 bg-darkpink text-white rounded-full font-semibold text-xl shadow-lg hover:bg-pink-400 transition-all pulse">
+                👗 Tips Wanita
+            </button>
+            <button onclick="openPage('page3')" class="w-full py-5 bg-darkpink text-white rounded-full font-semibold text-xl shadow-lg hover:bg-pink-400 transition-all">
+                👔 Tips Pria
+            </button>
+            <button onclick="openPage('page4')" class="w-full py-5 bg-darkpink text-white rounded-full font-semibold text-xl shadow-lg hover:bg-pink-400 transition-all">
+                ✨ Tips Tambahan
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- HALAMAN 2: WANITA -->
+<section id="page2" class="min-h-screen bg-white py-16 px-4 hidden">
+    <div class="max-w-4xl mx-auto">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="font-playfair text-4xl font-bold text-darkpink shine">👗 Wanita</h2>
+            <button onclick="backHome()" class="text-darkpink font-bold text-lg hover:underline">← Kembali</button>
+        </div>
+        
+        <div class="bg-softpink/30 p-8 rounded-2xl shadow-xl border border-softpink">
+            <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">20 Tips Lengkap (Kepala s/d Kaki)</h3>
+            <ol class="list-decimal list-inside space-y-3 text-base md:text-lg">
+                <li>✨ Pilih hijab atau aksesoris kepala yang senada dengan outfit.</li>
+                <li>💄 Makeup natural agar menonjolkan kecantikan asli wajah.</li>
+                <li>👚 Pilih top atau blouse berbahan adem untuk cuaca tropis.</li>
+                <li>🧥 Outerwear kardigan atau blazer buat tampilan lebih rapi.</li>
+                <li>🎨 Kemeja batik atau motif floral sangat cocok gaya lokal.</li>
+                <li>💃 Rok plisket atau rok span tetap favorit sepanjang masa.</li>
+                <li>👖 Celana kulot atau wide leg pants nyaman dan elegan.</li>
+                <li>👖 Jeans high-waist bikin kaki terlihat lebih jenjang.</li>
+                <li>👗 Dress midi atau maxi dress kesan sopan dan cantik.</li>
+                <li>🎀 Jangan lupa pakai inner yang nyaman dan tidak gerah.</li>
+                <li>🏵️ Kain tenun atau songket untuk sentuhan budaya Indonesia.</li>
+                <li>👜 Tas tote bag atau ransel kecil yang praktis dan lucu.</li>
+                <li>📿 Aksesoris kalung dan gelang yang simpel tapi mewah.</li>
+                <li>💍 Cincin atau jam tangan sebagai pemanis akhir.</li>
+                <li>👟 Sneakers putih paling aman dipadukan semua gaya.</li>
+                <li>👡 Sandal wedges atau flats yang cantik dan nyaman jalan.</li>
+                <li>🧦 Kaos kaki motif lucu menambah kesan imut.</li>
+                <li>🌸 Parfum wangi lembut yang tahan lama seharian.</li>
+                <li>🧷 Pastikan baju disetrika rapi agar terlihat mahal.</li>
+                <li>💖 Percaya diri adalah kunci gaya terbaikmu!</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<!-- HALAMAN 3: PRIA -->
+<section id="page3" class="min-h-screen bg-softpink/20 py-16 px-4 hidden">
+    <div class="max-w-4xl mx-auto">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="font-playfair text-4xl font-bold text-gray-800 shine">👔 Pria</h2>
+            <button onclick="backHome()" class="text-darkpink font-bold text-lg hover:underline">← Kembali</button>
+        </div>
+        
+        <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">20 Tips Lengkap (Kepala s/d Kaki)</h3>
+            <ol class="list-decimal list-inside space-y-3 text-base md:text-lg">
+                <li>💇‍♂️ Potongan rambut rapi yang sesuai bentuk wajah.</li>
+                <li>🧔 Jaga kebersihan wajah dan rapikan kumis atau jenggot.</li>
+                <li>🧢 Topi snapback, peci, atau kupluk sesuai acara.</li>
+                <li>😎 Kacamata hitam bisa menambah kesan keren instan.</li>
+                <li>👕 T-shirt polos atau logo simpel pilihan paling aman.</li>
+                <li>👔 Kemeja flannel atau kotak-kotak tetap hits abadi.</li>
+                <li>🏵️ Kemeja batik atau lurik gaya tradisi modern.</li>
+                <li>🤵 Polo shirt memberikan kesan rapi tapi santai.</li>
+                <li>🧥 Sweater atau hoodie nyaman dan kekinian.</li>
+                <li>🧥 Jaket denim atau bomber jacket wajib punya.</li>
+                <li>👖 Celana chino atau kain bahan fleksibel segala acara.</li>
+                <li>👖 Jeans slim fit yang pas di badan tidak terlalu ketat.</li>
+                <li>🎒 Celana cargo kembali populer kesan sporty.</li>
+                <li>🔗 Ikat pinggang warna senada dengan sepatu.</li>
+                <li>⌚ Jam tangan atau kalung simpel sebagai aksesoris.</li>
+                <li>🎩 Topi beanie atau bucket hat gaya streetwear.</li>
+                <li>👟 Sneakers putih atau hitam harus selalu bersih.</li>
+                <li>🥿 Sepatu loafer untuk tampilan semi formal.</li>
+                <li>🩴 Sandal slides atau jepit bahan berkualitas.</li>
+                <li>👃 Parfum wangi segar dan maskulin yang tahan lama.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<!-- HALAMAN 4: TIPS TAMBAHAN -->
+<section id="page4" class="min-h-screen bg-white py-16 px-4 hidden">
+    <div class="max-w-4xl mx-auto">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="font-playfair text-4xl font-bold text-darkpink shine">✨ Tips Tambahan</h2>
+            <button onclick="backHome()" class="text-darkpink font-bold text-lg hover:underline">← Kembali</button>
+        </div>
+        
+        <div class="bg-gradient-to-br from-softpink to-white p-8 rounded-2xl shadow-xl">
+            <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">Rahasia Tampil Kece & Lokal Pride!</h3>
+            
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="bg-white/70 p-4 rounded-xl text-center shadow-sm">
+                    <div class="text-4xl mb-2 float">💎</div>
+                    <p class="font-semibold">Aksesoris</p>
+                    <p class="text-sm">Gelang, kalung, cincin bikin outfit polos jadi mewah!</p>
+                </div>
+                <div class="bg-white/70 p-4 rounded-xl text-center shadow-sm">
+                    <div class="text-4xl mb-2 float" style="animation-delay:0.5s;">🇮🇩</div>
+                    <p class="font-semibold">Brand Lokal</p>
+                    <p class="text-sm">Dukung produk dalam negeri kualitas internasional!</p>
+                </div>
+                <div class="bg-white/70 p-4 rounded-xl text-center shadow-sm">
+                    <div class="text-4xl mb-2 float" style="animation-delay:1s;">🎨</div>
+                    <p class="font-semibold">Padu Warna</p>
+                    <p class="text-sm">Kulit sawo matang cocok banget Earth Tone & Navy.</p>
+                </div>
+                <div class="bg-white/70 p-4 rounded-xl text-center shadow-sm">
+                    <div class="text-4xl mb-2 float" style="animation-delay:1.5s;">🧼</div>
+                    <p class="font-semibold">Perawatan</p>
+                    <p class="text-sm">Lipat/gantung baju benar agar awet & wangi.</p>
+                </div>
+            </div>
+
+            <ul class="list-disc list-inside space-y-3 text-base md:text-lg bg-white/50 p-4 rounded-xl">
+                <li><b>Modern & Tradisi:</b> Kombinasi Jaket Jeans + Batik atau Lurik itu kombinasi paling juara dan kece!</li>
+                <li><b>Ukuran Baju:</b> Pastikan pas di badan, jangan terlalu kedodoran atau terlalu ketat, nyaman adalah nomor satu.</li>
+                <li><b>Kenyamanan:</b> Fashion terbaik adalah yang membuat kamu bebas bergerak dan percaya diri.</li>
+                <li><b>Detail Kecil:</b> Perhatikan kancing, resleting, dan kebersihan sepatu. Detail yang bikin beda!</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script>
+    function openPage(pageId) {
+        document.getElementById('home').style.display = 'none';
+        document.body.classList.remove('no-scroll');
+        document.querySelectorAll('section').forEach(s => s.classList.add('hidden'));
+        document.getElementById(pageId).classList.remove('hidden');
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    function backHome() {
+        document.getElementById('home').style.display = 'flex';
+        document.body.classList.add('no-scroll');
+        document.querySelectorAll('section').forEach(s => { if(s.id !== 'home') s.classList.add('hidden'); });
+    }
+</script>
+
+</body>
+</html>
